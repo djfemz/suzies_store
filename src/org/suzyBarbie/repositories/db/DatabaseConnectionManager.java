@@ -42,7 +42,8 @@ public class DatabaseConnectionManager {
         String username ="postgres";
         String password ="postgres";
         try {
-            return DriverManager.getConnection(url, username, password);
+            connection= DriverManager.getConnection(url, username, password);
+            return connection;
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
